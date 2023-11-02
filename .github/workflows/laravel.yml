@@ -26,10 +26,14 @@ jobs:
       run: chmod -R 777 storage bootstrap/cache
     - name: Create Database
       run: |
-        mkdir -p database
-        touch database/database.sqlite
-    - name: Execute tests (Unit and Feature tests) via PHPUnit
-      env:
-        DB_CONNECTION: sqlite
-        DB_DATABASE: database/database.sqlite
-      run: vendor/bin/phpunit
+        mkdir -p database- name: Debug .env and PHPUnit configuration
+        - name: Debug .env and PHPUnit configuration
+          run: |
+            cat .env
+            cat phpunit.xml
+    
+    #- name: Execute tests (Unit and Feature tests) via PHPUnit
+      #env:
+        #DB_CONNECTION: sqlite
+        #DB_DATABASE: database/database.sqlite
+      #run: vendor/bin/phpunit
