@@ -29,7 +29,7 @@ jobs:
         mkdir -p database
         touch database/database.sqlite
     - name: Debug .env and PHPUnit configuration
-        run: |
+      run: |
          cat .env
          cat phpunit.xml
     #- name: Execute tests (Unit and Feature tests) via PHPUnit
