@@ -22,6 +22,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-           port: 22
-           script: ls
+          port: 22
+          #script: ls
           script: "cd /var/www/hospitalMSLLLL && ./.scripts/deploy.sh"
