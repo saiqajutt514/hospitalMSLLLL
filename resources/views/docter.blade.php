@@ -35,7 +35,7 @@
                     <img src="images/doctor_02.jpg" alt="" class="img-responsive img-rounded">
                     <div class="widget-title">
                         <h3>Bryan Saftler</h3>
-                        <small>Internal Diseases</small>
+                        <small>andronii Diseases</small>
                     </div>
                     <!-- end title -->
                     <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
