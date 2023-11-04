@@ -16,7 +16,7 @@
                     <img src="images/doctor_01.jpg" alt="" class="img-responsive img-rounded">
                     <div class="widget-title">
                         <h3>Saiqa</h3>
-                        <small>Clinic Owner</small>
+                        <small>saiqa Owner</small>
                     </div>
                     <!-- end title -->
                     <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
