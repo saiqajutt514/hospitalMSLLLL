@@ -1,25 +1,30 @@
-name: Deploy
+name: Deploy to Server
 
-# Trigger the workflow on push and
-# pull request events on the master branch
 on:
   push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+    branches:
+      - main
 
-# Authenticate to the the server via ssh
-# and run our deployment script
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up SSH key
+        run: |
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ssh-key
+          chmod 600 ssh-key
+          eval $(ssh-agent -s)
+          ssh-add ./ssh-key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSHKEY }}
+
       - name: Deploy to Server
-        uses: appleboy/ssh-action@main
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          port: ${{ secrets.PORT }}
-          key: ${{ secrets.SSHKEY }}
-          script: "cd /var/www/hospitalMSLLLL && /var/www/hospitalMSLLLL/.scripts/deploy.sh"
+        run: |
+          ssh saiqa@192.168.58.130 'cd /var/www/hospitalMSLLLL && /var/www/hospitalMSLLLL/.script/deploy.sh'
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSHKEY }}
+
