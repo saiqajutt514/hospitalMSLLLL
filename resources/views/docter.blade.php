@@ -15,7 +15,7 @@
                 <div class="widget clearfix">
                     <img src="images/doctor_01.jpg" alt="" class="img-responsive img-rounded">
                     <div class="widget-title">
-                        <h3>Saiqa</h3>
+                        <h3>Dental sergon Saiqa</h3>
                         <small>saiqa Owner</small>
                     </div>
                     <!-- end title -->
