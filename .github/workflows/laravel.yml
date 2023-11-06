@@ -6,7 +6,7 @@ on:
 
 jobs:
   laravel-tests:
-    runs-on: self-hosted[php-runner]
+    runs-on: [php-runner]
     steps:
     - name: deploy
       run:
