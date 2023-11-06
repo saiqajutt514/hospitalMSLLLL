@@ -6,7 +6,7 @@
    <div class="container">
       <div class="heading">
          <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
-         <h2>The Specialist Clinic</h2>
+         <h2>Specialist Clinic</h2>
       </div>
       <!-- end title -->
       <div class="row">
